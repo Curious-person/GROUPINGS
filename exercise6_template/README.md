@@ -1,5 +1,5 @@
-Arjay
+# Arjay
 
-Kunin mo lang yung .fxml file tapos iedit mo nalang ulit dito pag-iuupload mo na
+Kunin mo lang yung .fxml file under ng view folder tapos iedit mo nalang ulit dito pag-iuupload mo na
 
 Thanks
