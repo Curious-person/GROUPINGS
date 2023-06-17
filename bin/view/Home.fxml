@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ImageView fitHeight="676.0" fitWidth="1012.0" layoutX="-1.0" layoutY="-2.0">
+         <image>
+            <Image url="@../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="351.0" fitWidth="324.0" layoutX="142.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/WomenBG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="354.0" fitWidth="272.0" layoutX="572.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenBG.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="316.0" layoutY="44.0" text="Welcome to JACCK!" textFill="#f9fbe7">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="button1" layoutX="210.0" layoutY="516.0" mnemonicParsing="false" onAction="#gotolight" text="Women">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2" layoutX="666.0" layoutY="521.0" mnemonicParsing="false" onAction="#gotoplant" text="Men">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
