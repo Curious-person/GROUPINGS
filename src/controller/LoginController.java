@@ -13,14 +13,21 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.BedroomLamp;
-import model.BedroomPlant;
+
+import model.BeigeDress;
+import model.BeigeShoes;
+import model.Cap;
 import model.BeigeBucket;
 import model.CargoSleeve;
 import model.Cart;
-import model.CeilingLamp;
 import model.MiniDress;
-import model.WallLamp;
+import model.BaseballShirt;
+import model.BottomShirt;
+import model.DrawstringHoodie;
+import model.FlapPocketShirtPants;
+import model.FloralJeans;
+import model.ShoulderSweater;
+
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -50,32 +57,41 @@ public class LoginController implements Initializable {
 
     FXMLLoader loader;
 
-    static BedroomLamp blamp = new BedroomLamp();
-    static CeilingLamp clamp = new CeilingLamp();
-    static WallLamp wlamp = new WallLamp();
-    static BedroomPlant bplant = new BedroomPlant();
+    static BeigeDress bdress = new BeigeDress();
+    static Cap cap = new Cap();
+    static BeigeShoes bshoes = new BeigeShoes();
     static BeigeBucket bbucket = new BeigeBucket();
     static CargoSleeve csleeve = new CargoSleeve();
     static MiniDress mdress = new MiniDress();
+    static BaseballShirt bshirt = new BaseballShirt();
+    static BottomShirt btshirt = new BottomShirt();
+    static DrawstringHoodie dthoodie = new DrawstringHoodie();
+    static FlapPocketShirtPants fpshirtpants = new FlapPocketShirtPants();
+    static FloralJeans fjeans = new FloralJeans();
+    static ShoulderSweater ssweater = new ShoulderSweater();
+
+
     static Cart cart = new Cart();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        // ============== WOMEN PRODUCTS ==================/
+
         // ============== BEIGE DRESS ==================//
-        blamp.setProductName("Beige Dress");
-        blamp.setProductPrice(5.00);
-        blamp.setProductImage("images/beige dress.jpg");
+        bdress.setProductName("Beige Dress");
+        bdress.setProductPrice(5.00);
+        bdress.setProductImage("images/beige dress.jpg");
         // ============== CAP ==================//
 
-        clamp.setProductName("Cap");
-        clamp.setProductPrice(10.00);
-        clamp.setProductImage("images/cap.jpg");
+        cap.setProductName("Cap");
+        cap.setProductPrice(10.00);
+        cap.setProductImage("images/cap.jpg");
 
         // ============== BEIGE SHOES ==================//
-        wlamp.setProductName("Beige Shoes");
-        wlamp.setProductPrice(15.00);
-        wlamp.setProductImage("images/beige shoes.jpg");
+        bshoes.setProductName("Beige Shoes");
+        bshoes.setProductPrice(15.00);
+        bshoes.setProductImage("images/beige shoes.jpg");
 
         // ============== BEIGE BUCKET ==================//
         bbucket.setProductName("Beige Bucket");
@@ -93,16 +109,37 @@ public class LoginController implements Initializable {
         mdress.setProductImage("images/midi dress.PNG");
 
 
-        // ============== PLANTS ==================/
+        // ============== MEN PRODUCTS ==================/
 
-        // ============== BEDROOM PLANT ==================/
-        bplant.setProductName("Bedroom Plant");
-        bplant.setProductPrice(5.00);
-        bplant.setProductImage("images/plant1.jpg");
+        // ============== BASEBALL SHIRT ==================/
+        bshirt.setProductName("Baseball Shirt");
+        bshirt.setProductPrice(5.00);
+        bshirt.setProductImage("images/Graphic baseball shirt.png");
 
+        // ============== BOTTOM SHIRT ==================/
+        btshirt.setProductName("Front Bottom Shirt");
+        btshirt.setProductPrice(5.00);
+        btshirt.setProductImage("images/Bottom front shirt.png");
 
+        // ============== MUSHROOM DRAWSTRING HOODIE ==================/
+        dthoodie.setProductName("Mushroom drawstring hoodie");
+        dthoodie.setProductPrice(5.00);
+        dthoodie.setProductImage("images/Mushroom drawstring hoodie.png");
 
-        // TODO Auto-generated method stub
+        // ============== FLAP POCKET SHIRT AND PANTS ==================/
+        fpshirtpants.setProductName("Flap Pocket Shirt and Pants");
+        fpshirtpants.setProductPrice(5.00);
+        fpshirtpants.setProductImage("images/Flap pocket shirt and pants.png");
+
+        // ============== SKULL FLORAL PRINT WIDE LEG JEANS ==================/
+        fjeans.setProductName("Skull Floral Print Wide Leg Jeans");
+        fjeans.setProductPrice(5.00);
+        fjeans.setProductImage("images/Skull floral print wide leg jeans.png");
+
+        // ============== SHOULDER SWEATER ==================/
+        ssweater.setProductName("Half Zip Drops Shoulder Sweater");
+        ssweater.setProductPrice(5.00);
+        ssweater.setProductImage("images/Half zip drops shoulder sweater.png");
 
         try {
             loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));

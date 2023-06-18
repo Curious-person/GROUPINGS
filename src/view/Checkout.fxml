@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="989.0" prefWidth="1668.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="989.0" prefWidth="1668.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutController">
    <children>
       <Pane layoutX="1224.0" layoutY="53.0" prefHeight="898.0" prefWidth="369.0" style="-fx-background-color: WHITE;">
          <children>
@@ -43,7 +43,7 @@
                <children>
                   <ImageView fx:id="img1" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/lamp1.jpg" />
+                        <Image url="@../images/beige%20dress.jpg" />
                      </image>
                   </ImageView>
                   <Label fx:id="price1" layoutX="201.0" layoutY="52.0" text="5.00" textFill="#4a4141">
@@ -64,9 +64,9 @@
             </Pane>
             <Pane fx:id="pane2" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img2" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img2" fitHeight="108.0" fitWidth="150.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/lamp2.jpg" />
+                        <Image url="@../images/cap.jpg" />
                      </image>
                   </ImageView>
                   <Label fx:id="price2" layoutX="204.0" layoutY="25.0" text="10.00" textFill="#4a4141">
@@ -89,7 +89,7 @@
                <children>
                   <ImageView fx:id="img3" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/lamp3.jpg" />
+                        <Image url="@../images/beige%20shoes.jpg" />
                      </image>
                   </ImageView>
                   <Label fx:id="price3" layoutX="211.0" layoutY="38.0" text="5.00" textFill="#4a4141">
@@ -110,9 +110,9 @@
             </Pane>
             <Pane fx:id="pane4" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img4" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img4" fitHeight="143.0" fitWidth="150.0" layoutX="30.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/plant3.jpg" />
+                        <Image url="@../images/Bucket.png" />
                      </image>
                   </ImageView>
                   <Label fx:id="price4" layoutX="201.0" layoutY="52.0" text="5.00" textFill="#4a4141">

@@ -46,19 +46,19 @@ public class CheckoutController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        name1.setText(LoginController.blamp.getProductName());
-        price1.setText(Double.toString(LoginController.blamp.getProductPrice()));
-        Image bedroomLamp = new Image(LoginController.blamp.getProductImage());
+        name1.setText(LoginController.bdress.getProductName());
+        price1.setText(Double.toString(LoginController.bdress.getProductPrice()));
+        Image bedroomLamp = new Image(LoginController.bdress.getProductImage());
         img1.setImage(bedroomLamp);
 
-        name2.setText(LoginController.clamp.getProductName());
-        price2.setText(Double.toString(LoginController.clamp.getProductPrice()));
-        Image ceilinglamp = new Image(LoginController.clamp.getProductImage());
+        name2.setText(LoginController.cap.getProductName());
+        price2.setText(Double.toString(LoginController.cap.getProductPrice()));
+        Image ceilinglamp = new Image(LoginController.cap.getProductImage());
         img2.setImage(ceilinglamp);
 
-        name3.setText(LoginController.wlamp.getProductName());
-        price3.setText(Double.toString(LoginController.wlamp.getProductPrice()));
-        Image walllamp = new Image(LoginController.wlamp.getProductImage());
+        name3.setText(LoginController.bshoes.getProductName());
+        price3.setText(Double.toString(LoginController.bshoes.getProductPrice()));
+        Image walllamp = new Image(LoginController.bshoes.getProductImage());
         img3.setImage(walllamp);
 
         name4.setText(LoginController.bbucket.getProductName());
@@ -78,9 +78,9 @@ public class CheckoutController implements Initializable {
 
         //PLANTS
 
-        name9.setText(LoginController.bplant.getProductName());
-        price9.setText(Double.toString(LoginController.bplant.getProductPrice()));
-        Image bedroomPlant = new Image(LoginController.bplant.getProductImage());
+        name9.setText(LoginController.bshirt.getProductName());
+        price9.setText(Double.toString(LoginController.bshirt.getProductPrice()));
+        Image bedroomPlant = new Image(LoginController.bshirt.getProductImage());
         img9.setImage(bedroomPlant);
 
         // Set default quantities in choicebox to 1
@@ -125,36 +125,36 @@ public class CheckoutController implements Initializable {
         ChoiceBox source = (ChoiceBox) event.getSource();
 
         // If product is chosen, compute item amount
-        if (LoginController.blamp.getProductStatus()) {
+        if (LoginController.bdress.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox1.getValue());
-            LoginController.blamp.setProductQuantity(qty);
-            item1Amount = LoginController.blamp.getProductPrice() * qty;
+            LoginController.bdress.setProductQuantity(qty);
+            item1Amount = LoginController.bdress.getProductPrice() * qty;
 
             if (source == choicebox1) {
-                item1Amount = LoginController.blamp.getProductPrice() * qty;
+                item1Amount = LoginController.bdress.getProductPrice() * qty;
             }
         }
 
-        if (LoginController.clamp.getProductStatus()) {
+        if (LoginController.cap.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox2.getValue());
-            LoginController.clamp.setProductQuantity(qty);
-            item2Amount = LoginController.clamp.getProductPrice() * qty;
+            LoginController.cap.setProductQuantity(qty);
+            item2Amount = LoginController.cap.getProductPrice() * qty;
 
             if (source == choicebox2) {
-                item2Amount = LoginController.clamp.getProductPrice() * qty;
+                item2Amount = LoginController.cap.getProductPrice() * qty;
             }
         }
 
-        if (LoginController.wlamp.getProductStatus()) {
+        if (LoginController.bshoes.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox3.getValue());
-            LoginController.wlamp.setProductQuantity(qty);
-            item3Amount = LoginController.wlamp.getProductPrice() * qty;
+            LoginController.bshoes.setProductQuantity(qty);
+            item3Amount = LoginController.bshoes.getProductPrice() * qty;
 
             if (source == choicebox3) {
-                item3Amount = LoginController.wlamp.getProductPrice() * qty;
+                item3Amount = LoginController.bshoes.getProductPrice() * qty;
             }
         }
 
@@ -192,14 +192,14 @@ public class CheckoutController implements Initializable {
         }
 
 
-        if (LoginController.bplant.getProductStatus()) {
+        if (LoginController.bshirt.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox5.getValue());
-            LoginController.bplant.setProductQuantity(qty);
-            item9Amount = LoginController.bplant.getProductPrice() * qty;
+            LoginController.bshirt.setProductQuantity(qty);
+            item9Amount = LoginController.bshirt.getProductPrice() * qty;
 
             if (source == choicebox5) {
-                item9Amount = LoginController.bplant.getProductPrice() * qty;
+                item9Amount = LoginController.bshirt.getProductPrice() * qty;
             }
         }
 
@@ -215,16 +215,16 @@ public class CheckoutController implements Initializable {
 
         double totalAmount = 0.00;
 
-        if (LoginController.blamp.getProductStatus()) {
-            totalAmount += LoginController.blamp.getProductPrice();
+        if (LoginController.bdress.getProductStatus()) {
+            totalAmount += LoginController.bdress.getProductPrice();
         }
 
-        if (LoginController.clamp.getProductStatus()) {
-            totalAmount += LoginController.clamp.getProductPrice();
+        if (LoginController.cap.getProductStatus()) {
+            totalAmount += LoginController.cap.getProductPrice();
         }
 
-        if (LoginController.wlamp.getProductStatus()) {
-            totalAmount += LoginController.wlamp.getProductPrice();
+        if (LoginController.bshoes.getProductStatus()) {
+            totalAmount += LoginController.bshoes.getProductPrice();
         }
 
         if (LoginController.bbucket.getProductStatus()) {
@@ -239,8 +239,8 @@ public class CheckoutController implements Initializable {
             totalAmount += LoginController.mdress.getProductPrice();
         }
 
-        if (LoginController.bplant.getProductStatus()) {
-            totalAmount += LoginController.bplant.getProductPrice();
+        if (LoginController.bshirt.getProductStatus()) {
+            totalAmount += LoginController.bshirt.getProductPrice();
         }
 
         total.setText(Double.toString(totalAmount));

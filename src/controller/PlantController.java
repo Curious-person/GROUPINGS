@@ -28,13 +28,13 @@ import alert.AlertMaker;
 public class PlantController implements Initializable {
 
     @FXML
-    Label name1, price1;
+    Label name1, name2, name3, name4, name5, name6, price1, price2, price3, price4, price5, price6;
 
     @FXML
-    ImageView img1;
+    ImageView img1, img2, img3, img4, img5, img6;
 
     @FXML
-    Button button1, cartbutton, homebutton, logoutbutton;
+    Button button1, button2, button3, button4, button5, button6, cartbutton, homebutton, logoutbutton;
 
     @FXML
     private AnchorPane scenepane; 
@@ -55,13 +55,50 @@ public class PlantController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        // ============== BEDROOM LAMP ==================//
+        // ============== BASEBALL PRINT SHIRT ==================//
 
-        name1.setText(LoginController.bplant.getProductName());
-        price1.setText(Double.toString(LoginController.bplant.getProductPrice()));
-        Image bedroomPlant = new Image(LoginController.bplant.getProductImage());
-        img1.setImage(bedroomPlant);
+        name1.setText(LoginController.bshirt.getProductName());
+        price1.setText(Double.toString(LoginController.bshirt.getProductPrice()));
+        Image baseballShirt = new Image(LoginController.bshirt.getProductImage());
+        img1.setImage(baseballShirt);
+
+        // ============== BOTTOM SHIRT ==================//
+
+        name2.setText(LoginController.btshirt.getProductName());
+        price2.setText(Double.toString(LoginController.btshirt.getProductPrice()));
+        Image bottomShirt = new Image(LoginController.btshirt.getProductImage());
+        img2.setImage(bottomShirt);
+
+        // ============== MUSHROOM DRAWSTRING HOODIE ==================//
+
+        name3.setText(LoginController.dthoodie.getProductName());
+        price3.setText(Double.toString(LoginController.dthoodie.getProductPrice()));
+        Image drawstringHoodie = new Image(LoginController.dthoodie.getProductImage());
+        img3.setImage(drawstringHoodie);
+
+        // ============== FLAP POCKET SHIRT AND PANTS ==================//
+
+        name4.setText(LoginController.fpshirtpants.getProductName());
+        price4.setText(Double.toString(LoginController.fpshirtpants.getProductPrice()));
+        Image flapShirtPants = new Image(LoginController.fpshirtpants.getProductImage());
+        img4.setImage(flapShirtPants);
+
+        // ============== SKULL FLORAL PRINT WIDE LEG JEANS ==================//
+
+        name5.setText(LoginController.fjeans.getProductName());
+        price5.setText(Double.toString(LoginController.fjeans.getProductPrice()));
+        Image floralJeans = new Image(LoginController.fjeans.getProductImage());
+        img5.setImage(floralJeans);
+
+        // ============== SHOULDER SWEATER ==================//
+
+        name6.setText(LoginController.ssweater.getProductName());
+        price6.setText(Double.toString(LoginController.ssweater.getProductPrice()));
+        Image shoulderSweater = new Image(LoginController.ssweater.getProductImage());
+        img6.setImage(shoulderSweater);
     }
+
+    
 
     public void buy(ActionEvent event) throws IOException {
 
@@ -71,11 +108,16 @@ public class PlantController implements Initializable {
 
         // If addtocart button is pressed, set product status to true
         if (sourceButton.equals(button1)) {
-            LoginController.bplant.setProductStatus(true);
-            LoginController.bplant.setProductQuantity(1);
-            LoginController.cart.addItem(LoginController.checkoutController.pane4);
+            LoginController.bshirt.setProductStatus(true);
+            LoginController.bshirt.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane7);
         }
 
+        // else if (sourceButton.equals(button2)) {
+        //     LoginController.btshirt.setProductStatus(true);
+        //     LoginController.btshirt.setProductQuantity(1);
+        //     LoginController.cart.addItem(LoginController.checkoutController.pane8);
+        // }
         LoginController.cart.showItems();
     }
 

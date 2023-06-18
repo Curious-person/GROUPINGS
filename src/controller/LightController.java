@@ -53,47 +53,46 @@ public class LightController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        // ============== BEDROOM LAMP ==================//
-        name1.setText(LoginController.blamp.getProductName());
-        price1.setText(Double.toString(LoginController.blamp.getProductPrice()));
-        Image bedroomLamp = new Image(LoginController.blamp.getProductImage());
-        img1.setImage(bedroomLamp);
+        // ============== BEIGE DRESS ==================//
+        name1.setText(LoginController.bdress.getProductName());
+        price1.setText(Double.toString(LoginController.bdress.getProductPrice()));
+        Image beigeDress = new Image(LoginController.bdress.getProductImage());
+        img1.setImage(beigeDress);
 
-        // ============== CEILING LAMP ==================//
+        // ============== CAP ==================//
 
-        name2.setText(LoginController.clamp.getProductName());
-        price2.setText(Double.toString(LoginController.clamp.getProductPrice()));
+        name2.setText(LoginController.cap.getProductName());
+        price2.setText(Double.toString(LoginController.cap.getProductPrice()));
+        Image Cap = new Image(LoginController.cap.getProductImage());
+        img2.setImage(Cap);
 
-        Image ceilingLamp = new Image(LoginController.clamp.getProductImage());
-        img2.setImage(ceilingLamp);
+        // ============== BEIGE SHOES ==================//
 
-        // ============== WALL LAMP ==================//
+        name3.setText(LoginController.bshoes.getProductName());
+        price3.setText(Double.toString(LoginController.bshoes.getProductPrice()));
+        Image beigeShoes = new Image(LoginController.bshoes.getProductImage());
+        img3.setImage(beigeShoes);
 
-        name3.setText(LoginController.wlamp.getProductName());
-        price3.setText(Double.toString(LoginController.wlamp.getProductPrice()));
-        Image wallLamp = new Image(LoginController.wlamp.getProductImage());
-        img3.setImage(wallLamp);
-
-        // ============== Beige Bucket ==================//
+        // ============== BEIGE BUCKET ==================//
 
         name4.setText(LoginController.bbucket.getProductName());
         price4.setText(Double.toString(LoginController.bbucket.getProductPrice()));
-        Image Beige = new Image(LoginController.bbucket.getProductImage());
-        img4.setImage(Beige);
+        Image beigeBucket = new Image(LoginController.bbucket.getProductImage());
+        img4.setImage(beigeBucket);
 
-        // ============== Cargo Longsleeve ==================//
+        // ============== CARGO LONGSLEEEVE ==================//
 
         name5.setText(LoginController.csleeve.getProductName());
         price5.setText(Double.toString(LoginController.csleeve.getProductPrice()));
         Image cargoSleeve = new Image(LoginController.csleeve.getProductImage());
         img5.setImage(cargoSleeve);
 
-        // ============== Cargo Longsleeve ==================//
+        // ============== MINI DRESS ==================//
 
         name6.setText(LoginController.mdress.getProductName());
         price6.setText(Double.toString(LoginController.mdress.getProductPrice()));
-        Image Dress = new Image(LoginController.mdress.getProductImage());
-        img6.setImage(Dress);
+        Image miniDress = new Image(LoginController.mdress.getProductImage());
+        img6.setImage(miniDress);
 
 
     }       
@@ -106,20 +105,20 @@ public class LightController implements Initializable {
 
         // If addtocart button is pressed, set product status to true
         if (sourceButton.equals(button1)) {
-            LoginController.blamp.setProductStatus(true);
-            LoginController.blamp.setProductQuantity(1);
+            LoginController.bdress.setProductStatus(true);
+            LoginController.bdress.setProductQuantity(1);
             LoginController.cart.addItem(LoginController.checkoutController.pane1);
         }
 
         else if (sourceButton == button2) {
-            LoginController.clamp.setProductStatus(true);
-            LoginController.clamp.setProductQuantity(1);
+            LoginController.cap.setProductStatus(true);
+            LoginController.cap.setProductQuantity(1);
             LoginController.cart.addItem(LoginController.checkoutController.pane2);
         }
 
         else if (sourceButton == button3) {
-            LoginController.wlamp.setProductStatus(true);
-            LoginController.wlamp.setProductQuantity(1);
+            LoginController.bshoes.setProductStatus(true);
+            LoginController.bshoes.setProductQuantity(1);
             LoginController.cart.addItem(LoginController.checkoutController.pane3);
         }
 
