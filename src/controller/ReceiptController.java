@@ -10,11 +10,11 @@ import javafx.scene.control.Label;
 public class ReceiptController implements Initializable {
 
     @FXML
-    double item1Amount, item2Amount, item3Amount, item4Amount, item5Amount, item6Amount, item7Amount, item8Amount, item9Amount, item10Amount, item11Amount, item12,Amount, item13Amount, item14Amount
+    double item1Amount, item2Amount, item3Amount, item4Amount, item5Amount, item6Amount, item7Amount, item8Amount, item9Amount, item10Amount, item11Amount, item12Amount, item13Amount, item14Amount
     , item15Amount, item16Amount;
 
     @FXML
-    Label qty1, qty2, qty3, qty4, qty5, qty6, qty7, qty8, qty9, qty10, qty11, qqty12, qty13, qty14, qty15, qty16,
+    Label qty1, qty2, qty3, qty4, qty5, qty6, qty7, qty8, qty9, qty10, qty11, qty12, qty13, qty14, qty15, qty16,
      product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16,
      price1, price2, price3, price4, price5, price6, price7, price8, price9, price10, price11, price12, price13, price14, price15, price16,
      amount1, amount2,amount3, amount4, amount5, amount6, amount7, amount8, amount9, amount10, amount11, amount12, amount13, amount14, amount15, amount16, total;
@@ -132,7 +132,87 @@ public class ReceiptController implements Initializable {
             item9Amount = LoginController.bshirt.getProductPrice() * LoginController.bshirt.getProductQuantity();
 
         }
-        double final_amount = item1Amount + item2Amount + item3Amount + item4Amount + item5Amount + item6Amount + item9Amount;
+
+        if (LoginController.btshirt.getProductStatus()) {
+            product10.setText(LoginController.btshirt.getProductName());
+            qty10.setText(Double.toString(LoginController.btshirt.getProductQuantity()));
+            price10.setText(Double.toString(LoginController.btshirt.getProductPrice()));
+            amount10.setText(Double
+                    .toString(LoginController.btshirt.getProductPrice() * LoginController.btshirt.getProductQuantity()));
+
+            product10.setVisible(true);
+            qty10.setVisible(true);
+            price10.setVisible(true);
+            amount10.setVisible(true);
+
+            item10Amount = LoginController.btshirt.getProductPrice() * LoginController.btshirt.getProductQuantity();
+
+        }
+
+        if (LoginController.dthoodie.getProductStatus()) {
+            product11.setText(LoginController.dthoodie.getProductName());
+            qty11.setText(Double.toString(LoginController.dthoodie.getProductQuantity()));
+            price11.setText(Double.toString(LoginController.dthoodie.getProductPrice()));
+            amount11.setText(Double
+                    .toString(LoginController.dthoodie.getProductPrice() * LoginController.dthoodie.getProductQuantity()));
+
+            product11.setVisible(true);
+            qty11.setVisible(true);
+            price11.setVisible(true);
+            amount11.setVisible(true);
+
+            item11Amount = LoginController.dthoodie.getProductPrice() * LoginController.dthoodie.getProductQuantity();
+
+        }
+
+        if (LoginController.fpshirtpants.getProductStatus()) {
+            product12.setText(LoginController.fpshirtpants.getProductName());
+            qty12.setText(Double.toString(LoginController.fpshirtpants.getProductQuantity()));
+            price12.setText(Double.toString(LoginController.fpshirtpants.getProductPrice()));
+            amount12.setText(Double
+                    .toString(LoginController.fpshirtpants.getProductPrice() * LoginController.fpshirtpants.getProductQuantity()));
+
+            product12.setVisible(true);
+            qty12.setVisible(true);
+            price12.setVisible(true);
+            amount12.setVisible(true);
+
+            item12Amount = LoginController.fpshirtpants.getProductPrice() * LoginController.fpshirtpants.getProductQuantity();
+
+        }
+
+        if (LoginController.fjeans.getProductStatus()) {
+            product13.setText(LoginController.fjeans.getProductName());
+            qty13.setText(Double.toString(LoginController.fjeans.getProductQuantity()));
+            price13.setText(Double.toString(LoginController.fjeans.getProductPrice()));
+            amount13.setText(Double
+                    .toString(LoginController.fjeans.getProductPrice() * LoginController.fjeans.getProductQuantity()));
+
+            product13.setVisible(true);
+            qty13.setVisible(true);
+            price13.setVisible(true);
+            amount13.setVisible(true);
+
+            item13Amount = LoginController.fjeans.getProductPrice() * LoginController.fjeans.getProductQuantity();
+
+        }
+
+        if (LoginController.ssweater.getProductStatus()) {
+            product14.setText(LoginController.ssweater.getProductName());
+            qty14.setText(Double.toString(LoginController.ssweater.getProductQuantity()));
+            price14.setText(Double.toString(LoginController.ssweater.getProductPrice()));
+            amount14.setText(Double
+                    .toString(LoginController.ssweater.getProductPrice() * LoginController.ssweater.getProductQuantity()));
+
+            product14.setVisible(true);
+            qty14.setVisible(true);
+            price14.setVisible(true);
+            amount14.setVisible(true);
+
+            item14Amount = LoginController.ssweater.getProductPrice() * LoginController.ssweater.getProductQuantity();
+
+        }
+        double final_amount = item1Amount + item2Amount + item3Amount + item4Amount + item5Amount + item6Amount + item9Amount + item10Amount + item11Amount + item12Amount + item13Amount + item14Amount;
         total.setText(Double.toString(final_amount));
 
     }

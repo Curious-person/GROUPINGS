@@ -110,15 +110,44 @@ public class PlantController implements Initializable {
         if (sourceButton.equals(button1)) {
             LoginController.bshirt.setProductStatus(true);
             LoginController.bshirt.setProductQuantity(1);
-            LoginController.cart.addItem(LoginController.checkoutController.pane7);
+            LoginController.cart.addItem(LoginController.checkoutController.pane9);
         }
 
-        // else if (sourceButton.equals(button2)) {
-        //     LoginController.btshirt.setProductStatus(true);
-        //     LoginController.btshirt.setProductQuantity(1);
-        //     LoginController.cart.addItem(LoginController.checkoutController.pane8);
-        // }
-        LoginController.cart.showItems();
+        if (sourceButton.equals(button2)) {
+            LoginController.btshirt.setProductStatus(true);
+            LoginController.btshirt.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane10);
+        }
+
+        if (sourceButton.equals(button3)) {
+            LoginController.dthoodie.setProductStatus(true);
+            LoginController.dthoodie.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane11);
+        }
+
+        if (sourceButton.equals(button4)) {
+            LoginController.fpshirtpants.setProductStatus(true);
+            LoginController.fpshirtpants.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane12);
+        }
+
+        if (sourceButton.equals(button5)) {
+            LoginController.fjeans.setProductStatus(true);
+            LoginController.fjeans.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane13);
+        }
+
+        if (sourceButton.equals(button6)) {
+            LoginController.ssweater.setProductStatus(true);
+            LoginController.ssweater.setProductQuantity(1);
+            LoginController.cart.addItem(LoginController.checkoutController.pane14);
+        }
+
+
+
+        
+
+       
     }
 
     // Goes to Checkout.fxml

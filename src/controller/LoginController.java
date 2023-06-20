@@ -55,6 +55,8 @@ public class LoginController implements Initializable {
     @FXML
     static Parent homeRoot = null;
 
+    static String username;
+
     FXMLLoader loader;
 
     static BeigeDress bdress = new BeigeDress();
@@ -157,7 +159,7 @@ public class LoginController implements Initializable {
 
     public void login(ActionEvent event) throws IOException {
 
-        String username = mytextfield.getText();
+        username = mytextfield.getText();
         String password = mypasswordfield.getText();
 
         if (username.equals("a") && password.equals("a")) {
@@ -168,6 +170,10 @@ public class LoginController implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
+            //Calls the method for getting the username to display
+            FXMLLoader getName = new FXMLLoader(getClass().getResource("/view/Home.fxml"));
+            root = getName.load();
 
         } else {
             mywarninglabel.setVisible(true);

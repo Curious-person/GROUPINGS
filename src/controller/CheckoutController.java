@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -23,7 +24,7 @@ import javafx.stage.Stage;
 public class CheckoutController implements Initializable {
 
     @FXML
-    Pane pane1, pane2, pane3, pane4, pane5, pane6, pane7, pane8;
+    Pane pane1, pane2, pane3, pane4, pane5, pane6, pane9, pane10, pane11, pane12, pane13, pane14;
 
     @FXML
     VBox myvbox;
@@ -41,7 +42,6 @@ public class CheckoutController implements Initializable {
 
     private String[] quantity = { "1", "2", "3" };
 
-    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -74,7 +74,7 @@ public class CheckoutController implements Initializable {
         name6.setText(LoginController.mdress.getProductName());
         price6.setText(Double.toString(LoginController.mdress.getProductPrice()));
         Image Dress = new Image(LoginController.mdress.getProductImage());
-        img5.setImage(Dress);
+        img6.setImage(Dress);
 
         //PLANTS
 
@@ -82,6 +82,32 @@ public class CheckoutController implements Initializable {
         price9.setText(Double.toString(LoginController.bshirt.getProductPrice()));
         Image bedroomPlant = new Image(LoginController.bshirt.getProductImage());
         img9.setImage(bedroomPlant);
+
+        name10.setText(LoginController.btshirt.getProductName());
+        price10.setText(Double.toString(LoginController.btshirt.getProductPrice()));
+        Image Plant = new Image(LoginController.btshirt.getProductImage());
+        img10.setImage(Plant);
+
+        name11.setText(LoginController.dthoodie.getProductName());
+        price11.setText(Double.toString(LoginController.dthoodie.getProductPrice()));
+        Image Planting = new Image(LoginController.dthoodie.getProductImage());
+        img11.setImage(Planting);
+
+        name12.setText(LoginController.fpshirtpants.getProductName());
+        price12.setText(Double.toString(LoginController.fpshirtpants.getProductPrice()));
+        Image shirtPants = new Image(LoginController.fpshirtpants.getProductImage());
+        img12.setImage(shirtPants);
+
+        name13.setText(LoginController.fjeans.getProductName());
+        price13.setText(Double.toString(LoginController.fjeans.getProductPrice()));
+        Image jeansImage = new Image(LoginController.fjeans.getProductImage());
+        img13.setImage(jeansImage);
+
+        name14.setText(LoginController.ssweater.getProductName());
+        price14.setText(Double.toString(LoginController.ssweater.getProductPrice()));
+        Image sweaterImage = new Image(LoginController.ssweater.getProductImage());
+        img14.setImage(sweaterImage);
+
 
         // Set default quantities in choicebox to 1
         choicebox1.setValue("1");
@@ -91,6 +117,12 @@ public class CheckoutController implements Initializable {
         choicebox5.setValue("1");
         choicebox6.setValue("1");
         choicebox9.setValue("1");
+        choicebox10.setValue("1");
+        choicebox11.setValue("1");
+        choicebox12.setValue("1");
+        choicebox13.setValue("1");
+        choicebox14.setValue("1");
+
 
         // Insert quantity array to choicebox
         choicebox1.getItems().addAll(quantity);
@@ -100,6 +132,11 @@ public class CheckoutController implements Initializable {
         choicebox5.getItems().addAll(quantity);
         choicebox6.getItems().addAll(quantity);
         choicebox9.getItems().addAll(quantity);
+        choicebox10.getItems().addAll(quantity);
+        choicebox11.getItems().addAll(quantity);
+        choicebox12.getItems().addAll(quantity);
+        choicebox13.getItems().addAll(quantity);
+        choicebox14.getItems().addAll(quantity);
 
         // Add event handler on all choiceboxes
         choicebox1.setOnAction(this::computeTotal);
@@ -109,6 +146,11 @@ public class CheckoutController implements Initializable {
         choicebox5.setOnAction(this::computeTotal);
         choicebox6.setOnAction(this::computeTotal);
         choicebox9.setOnAction(this::computeTotal);
+        choicebox10.setOnAction(this::computeTotal);
+        choicebox11.setOnAction(this::computeTotal);
+        choicebox12.setOnAction(this::computeTotal);
+        choicebox13.setOnAction(this::computeTotal);
+        choicebox14.setOnAction(this::computeTotal);
     }
 
     public void computeTotal(ActionEvent event) {
@@ -121,6 +163,11 @@ public class CheckoutController implements Initializable {
         double item5Amount = 0;
         double item6Amount = 0;
         double item9Amount = 0;
+        double item10Amount = 0;
+        double item11Amount = 0;
+        double item12Amount = 0;
+        double item13Amount = 0;
+        double item14Amount = 0;
 
         ChoiceBox source = (ChoiceBox) event.getSource();
 
@@ -194,17 +241,72 @@ public class CheckoutController implements Initializable {
 
         if (LoginController.bshirt.getProductStatus()) {
 
-            double qty = Double.parseDouble(choicebox5.getValue());
+            double qty = Double.parseDouble(choicebox9.getValue());
             LoginController.bshirt.setProductQuantity(qty);
             item9Amount = LoginController.bshirt.getProductPrice() * qty;
 
-            if (source == choicebox5) {
+            if (source == choicebox9) {
                 item9Amount = LoginController.bshirt.getProductPrice() * qty;
             }
         }
 
+        if (LoginController.btshirt.getProductStatus()) {
+
+            double qty = Double.parseDouble(choicebox10.getValue());
+            LoginController.btshirt.setProductQuantity(qty);
+            item10Amount = LoginController.btshirt.getProductPrice() * qty;
+
+            if (source == choicebox10) {
+                item10Amount = LoginController.bshirt.getProductPrice() * qty;
+            }
+        }
+
+        if (LoginController.dthoodie.getProductStatus()) {
+
+            double qty = Double.parseDouble(choicebox11.getValue());
+            LoginController.dthoodie.setProductQuantity(qty);
+            item11Amount = LoginController.dthoodie.getProductPrice() * qty;
+
+            if (source == choicebox11) {
+                item11Amount = LoginController.dthoodie.getProductPrice() * qty;
+            }
+        }
+
+        if (LoginController.fpshirtpants.getProductStatus()) {
+
+            double qty = Double.parseDouble(choicebox12.getValue());
+            LoginController.fpshirtpants.setProductQuantity(qty);
+            item12Amount = LoginController.fpshirtpants.getProductPrice() * qty;
+
+            if (source == choicebox12) {
+                item12Amount = LoginController.fpshirtpants.getProductPrice() * qty;
+            }
+        }
+
+        if (LoginController.fjeans.getProductStatus()) {
+
+            double qty = Double.parseDouble(choicebox13.getValue());
+            LoginController.fjeans.setProductQuantity(qty);
+            item13Amount = LoginController.fjeans.getProductPrice() * qty;
+
+            if (source == choicebox13) {
+                item13Amount = LoginController.fjeans.getProductPrice() * qty;
+            }
+        }
+
+        if (LoginController.ssweater.getProductStatus()) {
+
+            double qty = Double.parseDouble(choicebox14.getValue());
+            LoginController.ssweater.setProductQuantity(qty);
+            item14Amount = LoginController.ssweater.getProductPrice() * qty;
+
+            if (source == choicebox14) {
+                item14Amount = LoginController.ssweater.getProductPrice() * qty;
+            }
+        }
+
         // Compute total amount for all items chosen
-        totalAmount = item1Amount + item2Amount + item3Amount + item4Amount + item5Amount + item6Amount + item9Amount;
+        totalAmount = item1Amount + item2Amount + item3Amount + item4Amount + item5Amount + item6Amount + item9Amount + item10Amount + item11Amount + item12Amount + item13Amount + item14Amount;
 
         // Display total amount in total label
         total.setText(Double.toString(totalAmount));
@@ -242,6 +344,23 @@ public class CheckoutController implements Initializable {
         if (LoginController.bshirt.getProductStatus()) {
             totalAmount += LoginController.bshirt.getProductPrice();
         }
+
+        if (LoginController.dthoodie.getProductStatus()) {
+            totalAmount += LoginController.dthoodie.getProductPrice();
+        } 
+
+        if (LoginController.fpshirtpants.getProductStatus()) {
+            totalAmount += LoginController.fpshirtpants.getProductPrice();
+        }
+
+        if (LoginController.fjeans.getProductStatus()) {
+            totalAmount += LoginController.fjeans.getProductPrice();
+        }
+
+        if (LoginController.ssweater.getProductStatus()) {
+            totalAmount += LoginController.ssweater.getProductPrice();
+        }
+        
 
         total.setText(Double.toString(totalAmount));
     }
