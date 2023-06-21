@@ -16,6 +16,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -71,6 +72,11 @@ public class HomeController implements Initializable{
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+        
+        // Alert alert1 = new Alert(AlertType.INFORMATION );
+        // alert1.setTitle("Information");
+        // alert1.setHeaderText("Your cart is still empty");
+        // alert1.show();
     }
     
     public void gotolight(ActionEvent event) throws IOException {
@@ -85,11 +91,19 @@ public class HomeController implements Initializable{
 
         Alert alert = new Alert(AlertType.CONFIRMATION  );
         alert.setTitle("Exit");
-        alert.setHeaderText("You are about to leave JAACK.");
-        alert.setContentText("Do you wish to stop shopping?: ");
+        alert.setHeaderText("You are about to leave JACCK.");
+        alert.setContentText("Do you wish to stop shopping? ");
+  
+            // Load the app icon
+        Image appIcon = new Image("images/JACCK-removebg-preview.png");
+        ImageView imageView = new ImageView(appIcon);
+        imageView.setFitWidth(48); // Set the desired width of the icon
+        imageView.setFitHeight(48); // Set the desired height of the icon
+
+        // Set the app icon as the graphic of the alert dialog
+        alert.setGraphic(imageView);
 
         if (alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage) scenepane.getScene().getWindow();
             System.out.println("You have successfully logged out.");
             stage.close();
         }

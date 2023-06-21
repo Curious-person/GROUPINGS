@@ -11,27 +11,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane prefHeight="1716.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlantController">
+<ScrollPane prefHeight="774.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlantController">
    <content>
       <AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1410.0" prefWidth="1296.0" style="-fx-background-color: white;">
          <children>
-            <Pane layoutY="-1.0" prefHeight="170.0" prefWidth="1210.0" style="-fx-background-color: #474554;">
+            <Pane layoutY="-1.0" prefHeight="170.0" prefWidth="1270.0" style="-fx-background-color: #474554;">
                <children>
                   <Button fx:id="homebutton" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" onAction="#gotohome" prefHeight="165.0" prefWidth="190.0" style="-fx-background-color: #474554;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="logoutbutton" layoutX="861.0" mnemonicParsing="false" onAction="#logout" prefHeight="168.0" prefWidth="171.0" style="-fx-background-color: #474554;" text="Logout" textFill="WHITE">
+                  <Button fx:id="logoutbutton" layoutX="930.0" layoutY="1.0" mnemonicParsing="false" onAction="#logout" prefHeight="168.0" prefWidth="171.0" style="-fx-background-color: #474554;" text="Logout" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="cartbutton" layoutX="1044.0" layoutY="2.0" mnemonicParsing="false" onAction="#gotocart" prefHeight="167.0" prefWidth="166.0" style="-fx-background-color: #474554;" text="My Cart" textFill="WHITE">
+                  <Button fx:id="cartbutton" layoutX="1090.0" mnemonicParsing="false" onAction="#gotocart" prefHeight="167.0" prefWidth="166.0" style="-fx-background-color: #474554;" text="My Cart" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
+                  <Text fill="WHITE" layoutX="579.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="48.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
             <Pane layoutX="78.0" layoutY="207.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
@@ -58,12 +63,12 @@
                   </Button>
                </children>
                <padding>
-                  <Insets bottom="30.0" top="30.0" />
+                  <Insets bottom="50.0" top="50.0" />
                </padding>
             </Pane>
             <Pane layoutX="78.0" layoutY="595.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img2" fitHeight="355.0" fitWidth="323.0" layoutX="8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img2" fitHeight="359.0" fitWidth="336.0" layoutX="8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Bottom%20front%20shirt.png" />
                      </image>
@@ -85,12 +90,12 @@
                   </Button>
                </children>
                <padding>
-                  <Insets bottom="30.0" top="30.0" />
+                  <Insets bottom="50.0" top="50.0" />
                </padding>
             </Pane>
-            <Pane layoutX="64.0" layoutY="963.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+            <Pane layoutX="78.0" layoutY="982.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img3" fitHeight="353.0" fitWidth="280.0" layoutX="28.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img3" fitHeight="359.0" fitWidth="336.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Mushroom%20drawstring%20hoodie.png" />
                      </image>
@@ -112,22 +117,22 @@
                   </Button>
                </children>
                <padding>
-                  <Insets bottom="30.0" top="30.0" />
+                  <Insets bottom="50.0" top="50.0" />
                </padding>
             </Pane>
             <Pane layoutX="802.0" layoutY="207.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img4" fitHeight="346.0" fitWidth="237.0" layoutX="47.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img4" fitHeight="359.0" fitWidth="336.0" layoutX="47.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Flap%20pocket%20shirt%20and%20pants.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="name4" layoutX="76.0" layoutY="235.0" text="Flap Pocket Shirt Pants" textFill="WHITE">
+                  <Label fx:id="name4" layoutX="76.0" layoutY="235.0" text="Flap Pocket Shirt Pants" textFill="#f2e9e9">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="price4" layoutX="143.0" layoutY="266.0" text="1,999.00" textFill="WHITE">
+                  <Label fx:id="price4" layoutX="143.0" layoutY="266.0" text="1,999.00" textFill="#ece2e2">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -142,9 +147,9 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
             </Pane>
-            <Pane layoutX="802.0" layoutY="559.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+            <Pane layoutX="834.0" layoutY="595.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
                <children>
-                  <ImageView fx:id="img5" fitHeight="340.0" fitWidth="336.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img5" fitHeight="329.0" fitWidth="326.0" layoutX="5.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Skull%20floral%20print%20wide%20leg%20jeans.png" />
                      </image>
@@ -169,7 +174,7 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
             </Pane>
-            <Pane layoutX="823.0" layoutY="947.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+            <Pane layoutX="825.0" layoutY="982.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
                <children>
                   <ImageView fx:id="img6" fitHeight="354.0" fitWidth="267.0" layoutX="34.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -196,11 +201,6 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
             </Pane>
-            <Text fill="WHITE" layoutX="572.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEN">
-               <font>
-                  <Font name="Times New Roman Bold" size="48.0" />
-               </font>
-            </Text>
          </children>
       </AnchorPane>
    </content>

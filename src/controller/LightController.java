@@ -50,6 +50,13 @@ public class LightController implements Initializable {
     @FXML
     static CheckoutController checkoutController = null;
 
+    public void start(Stage primaryStage) throws Exception{
+
+        Image icon = new Image ("Logo (2)");
+        primaryStage.getIcons().add(icon);
+        primaryStage.setTitle("JACCK");
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
