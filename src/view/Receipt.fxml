@@ -125,7 +125,7 @@
             <Font name="Monospaced Regular" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="20.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: 01/06/23   12:00">
+      <Text layoutX="20.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: 6/21/2023 3:00PM">
          <font>
             <Font name="Monospaced Regular" size="12.0" />
          </font>
@@ -330,11 +330,6 @@
             <Font name="Monospaced Regular" size="12.0" />
          </font>
       </Label>
-      <ImageView fitHeight="196.0" fitWidth="158.0" layoutX="-15.0" layoutY="-62.0">
-         <image>
-            <Image url="@../images/Logo%20(2).png" />
-         </image>
-      </ImageView>
       <Text layoutX="22.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JACCK CLOTHING" />
       <Line endX="250.0" layoutX="119.0" layoutY="107.0" startX="-100.0" />
       <Text layoutX="34.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice To :" />
@@ -344,5 +339,11 @@
             <Font size="18.0" />
          </font>
       </Text>
+      <Label fx:id="totalamount" layoutX="287.0" layoutY="546.0" text="Label" visible="false" />
+      <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/JACCK-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
