@@ -25,7 +25,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import alert.AlertMaker;
 
-public class PlantController implements Initializable {
+public class MenController implements Initializable {
 
     @FXML
     Label name1, name2, name3, name4, name5, name6, price1, price2, price3, price4, price5, price6;
@@ -178,7 +178,7 @@ public class PlantController implements Initializable {
 
         Alert alert = new Alert(AlertType.CONFIRMATION  );
         alert.setTitle("Exit");
-        alert.setHeaderText("You are about to leave JAACK.");
+        alert.setHeaderText("You are about to leave JACCK.");
         alert.setContentText("Do you wish to stop shopping?: ");
 
         if (alert.showAndWait().get() == ButtonType.OK) {

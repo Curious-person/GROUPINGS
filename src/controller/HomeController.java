@@ -21,7 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class HomeController implements Initializable{
+public class HomeController implements Initializable {
 
     @FXML
     ImageView img1, img2;
@@ -49,10 +49,10 @@ public class HomeController implements Initializable{
         namelabel.setText(LoginController.username);
     }
 
-    // Goes to Checkout.fxml
-    public void gotoplant(ActionEvent event) throws IOException {
+    // Goes to Men.fxml
+    public void gotomen(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/view/Plants.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Men.fxml"));
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -73,15 +73,11 @@ public class HomeController implements Initializable{
         stage.setScene(scene);
         stage.show();
         
-        // Alert alert1 = new Alert(AlertType.INFORMATION );
-        // alert1.setTitle("Information");
-        // alert1.setHeaderText("Your cart is still empty");
-        // alert1.show();
     }
     
-    public void gotolight(ActionEvent event) throws IOException {
+    public void gotowomen(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/view/Lights.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Women.fxml"));
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -22,7 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import alert.AlertMaker;
 
-public class LightController implements Initializable {
+public class WomenController implements Initializable {
 
     @FXML
     Label name1, name2, name3, name4, name5, name6, name7, name8, price1, price2, price3, price4, price5, price6, price7, price8;
@@ -180,7 +180,7 @@ public class LightController implements Initializable {
 
         Alert alert = new Alert(AlertType.CONFIRMATION  );
         alert.setTitle("Exit");
-        alert.setHeaderText("You are about to leave JAACK.");
+        alert.setHeaderText("You are about to leave JACCK.");
         alert.setContentText("Do you wish to stop shopping?: ");
 
         if (alert.showAndWait().get() == ButtonType.OK) {

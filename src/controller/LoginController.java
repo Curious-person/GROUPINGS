@@ -130,17 +130,17 @@ public class LoginController implements Initializable {
         dthoodie.setProductImage("images/Mushroom drawstring hoodie.png");
 
         // ============== FLAP POCKET SHIRT AND PANTS ==================/
-        fpshirtpants.setProductName("Flap Pocket Shirt and Pants");
+        fpshirtpants.setProductName(" Shirt and Pants");
         fpshirtpants.setProductPrice(1999.00);
         fpshirtpants.setProductImage("images/Flap pocket shirt and pants.png");
 
         // ============== SKULL FLORAL PRINT WIDE LEG JEANS ==================/
-        fjeans.setProductName("Skull Floral Print Wide Leg Jeans");
+        fjeans.setProductName("Wide Leg Jeans");
         fjeans.setProductPrice(1300.00);
         fjeans.setProductImage("images/Skull floral print wide leg jeans.png");
 
         // ============== SHOULDER SWEATER ==================/
-        ssweater.setProductName("Half Zip Drops Shoulder Sweater");
+        ssweater.setProductName("Shoulder Sweater");
         ssweater.setProductPrice(1300.00);
         ssweater.setProductImage("images/Half zip drops shoulder sweater.png");
 
