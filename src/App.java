@@ -1,9 +1,11 @@
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
@@ -24,6 +26,13 @@ public class App extends Application {
             stage.setScene(scene);
 
             stage.show();
+
+            Image image = new Image("images/JACCK-removebg-preview.png");
+            stage.getIcons().add(image);
+            
+            stage.setTitle("JACCK");
+            stage.show();
+
 
             //Hitting the "x" button will prompt this code
             stage.setOnCloseRequest(event -> {
@@ -48,7 +57,6 @@ public class App extends Application {
             stage.close();
         }
 
-
+        } 
     }
-
-}
+   
